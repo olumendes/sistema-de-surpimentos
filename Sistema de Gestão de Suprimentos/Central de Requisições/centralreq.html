@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Central de Requisições - Supply Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="central-requisicoes-container">
+        <h2>Central de Requisições</h2>
+        <button id="nova-requisicao-btn">Nova Requisição</button>
+        
+        <!-- Formulário para Nova Requisição -->
+        <div id="nova-requisicao-form" style="display: none;">
+            <h3>Adicionar Nova Requisição</h3>
+            <label for="usuario">Usuário:</label>
+            <input type="text" id="usuario" required>
+            <label for="item">Item:</label>
+            <input type="text" id="item" required>
+            <label for="quantidade">Quantidade:</label>
+            <input type="number" id="quantidade" required>
+            <label for="status">Status:</label>
+            <select id="status">
+                <option value="Pendente">Pendente</option>
+                <option value="Aprovado">Aprovado</option>
+                <option value="Reprovado">Reprovado</option>
+            </select>
+            <label for="verde">Verde:</label>
+            <input type="text" id="verde" placeholder="Insira o campo verde">
+            <button id="add-requisicao-btn">Adicionar Requisição</button>
+        </div>
+        
+        <table id="requisicoes-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Usuário</th>
+                    <th>Item</th>
+                    <th>Quantidade</th>
+                    <th>Status</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Rodrigo Silva</td>
+                    <td>Papel A4</td>
+                    <td>10</td>
+                    <td>Pendente</td>
+                    <td>
+                        <button class="aprovar-btn">Aprovar</button>
+                        <button class="reprovar-btn">Reprovar</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Amanda Santos</td>
+                    <td>Canetas</td>
+                    <td>20</td>
+                    <td>Pendente</td>
+                    <td>
+                        <button class="aprovar-btn">Aprovar</button>
+                        <button class="reprovar-btn">Reprovar</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Luan Mendes</td>
+                    <td>Post-its</td>
+                    <td>50</td>
+                    <td>Pendente</td>
+                    <td>
+                        <button class="aprovar-btn">Aprovar</button>
+                        <button class="reprovar-btn">Reprovar</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Raul Farias</td>
+                    <td>Grampo</td>
+                    <td>100</td>
+                    <td>Pendente</td>
+                    <td>
+                        <button class="aprovar-btn">Aprovar</button>
+                        <button class="reprovar-btn">Reprovar</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Roger Guedes</td>
+                    <td>Papel toalha</td>
+                    <td>5</td>
+                    <td>Pendente</td>
+                    <td>
+                        <button class="aprovar-btn">Aprovar</button>
+                        <button class="reprovar-btn">Reprovar</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="cenreq.js"></script>
+</body>
+</html>
